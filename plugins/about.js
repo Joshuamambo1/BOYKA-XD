@@ -1,0 +1,65 @@
+const config = require('../config')
+const {cmd , commands} = require('../command')
+cmd({
+    pattern: "about",
+    alias: ["boykaxd","whois"], 
+    react: "👑",
+    desc: "get owner dec",
+    category: "main",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+let about = `
+*╭━━〔 𝗕𝗢𝗬𝗞𝗔-𝗫𝗗 〕━━┈⊷*
+
+*👋 HELLO ${pushname}*
+
+*╰──────────────┈⊷*
+*╭━━━〔 MY ABOUT 〕━━━┈⊷*
+*┃★╭──────────────*
+*┃★│* *ᴡᴇʟᴄᴏᴍᴇ ɪᴛs ʙᴏʏᴋᴀ-xᴅ-ʙᴏᴛ*
+*┃★│* *ᴄʀᴇᴀᴛᴇʀ : ‎🫡ᴛᴇʟᴋɪɴɢ-sᴜᴘᴘᴏʀᴛ*
+*┃★│* *ʀᴇᴀʟ ɴᴀᴍᴇ : ᴊᴏsʜᴜᴀᴍᴀᴍʙᴏ𝟭-ᴛᴇᴄʜ*
+*┃★│* *ᴘᴜʙʟɪᴄ ɴᴀᴍᴇ : ᴛᴇʟᴋɪɴɢ*
+*┃★│* *ᴀɢᴇ : 23 ʏᴇᴀʀ*
+*┃★│* *ᴄɪᴛʏ : ɢᴡᴇʟᴏ/ᴍᴋᴏʙᴀ*
+*┃★│* *ᴀ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ᴅᴇᴠᴇʟᴘᴏʀ*
+*┃★╰──────────────*
+*╰━━━━━━━━━━━━━━━┈⊷*
+> *◆◆◆◆◆◆◆◆◆◆◆◆*
+
+*[ • SPECIAL THANKS FOR • ]*
+*╭━━━〔 THANKS TO 〕━━━┈⊷*
+*┃★╭──────────────*
+*┃★│* *▢ᴍɪʟᴅʀᴇᴅ-xᴍᴅ(Jᴏsʜᴋɪɴɢ ᴅᴇᴠ)*
+*┃★│* *▢ʙᴏʏᴋᴀ-xᴅ(Tᴇʟᴋɪɴɢ)*
+*┃★│* *▢ᴢᴀɴᴅɪʟᴇ-ᴍᴋ(ᴍɪᴅᴋɪɴɢ)*
+*┃★│* *▢ᴍɪᴅᴋʙᴀɴ(ɴᴇᴛᴋɪɴɢ)*
+*┃★│* *▢ᴢᴀɴᴅɪʟᴇ-ᴍᴅ(ᴢᴀɴᴅɪʟᴇ)*
+*┃★│* *▢ᴍᴀʟᴠɪɴ-xᴅ(ᴍᴀʟᴠɪɴ-ᴋɪɴɢ)*
+*┃★╰──────────────*
+*╰━━━━━━━━━━━━━━━┈⊷*
+
+*•────────────•⟢*
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴏʏᴋᴀ-xᴅ
+*•────────────•⟢*
+`
+
+await conn.sendMessage(from,{image:{url:`https://files.catbox.moe/mpx2sv.jpeg`},caption:about,
+                             contextInfo: {
+    mentionedJid: [m.sender],
+    forwardingScore: 999,
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: '120363347365643318@newsletter',
+      newsletterName: 'ʙᴏʏᴋᴀ-xᴅ-X',
+      serverMessageId: 999
+    }
+  }
+}, { quoted: mek });
+} catch (e) {
+console.log(e)
+reply(`${e}`)
+}
+})
